@@ -349,7 +349,7 @@ decorate = (api, md, slugCache, verbose) ->
 
   for resourceGroup in api.resourceGroups or []
     # Element ID and link
-    resourceGroup.elementId = slugify resourceGroup.name, true
+    resourceGroup.elementId = slugify("#{api.name}-#{resourceGroup.name}", true)
     resourceGroup.elementLink = "##{resourceGroup.elementId}"
 
     # Description
@@ -361,13 +361,13 @@ decorate = (api, md, slugCache, verbose) ->
     for resource in resourceGroup.resources or []
       # Element ID and link
       resource.elementId = slugify(
-        "#{resourceGroup.name}-#{resource.name}", true)
+        "#{api.name}-#{resourceGroup.name}-#{resource.name}", true)
       resource.elementLink = "##{resource.elementId}"
 
       for action in resource.actions or []
         # Element ID and link
         action.elementId = slugify(
-          "#{resourceGroup.name}-#{resource.name}-#{action.method}", true)
+          "#{api.name}-#{resourceGroup.name}-#{resource.name}-#{action.method}", true)
         action.elementLink = "##{action.elementId}"
 
         # Lowercase HTTP method name
@@ -499,7 +499,7 @@ exports.render = (input, options, done) ->
 
   # Transform built-in layout names to paths
   if options.themeTemplate is 'default'
-    options.themeTemplate = path.join ROOT, 'templates', 'index.jade'
+    options.themeTemplate = path.join ROOT, 'templates', 'iobeam-react.jade'
 
   # Setup markdown with code highlighting and smartypants. This also enables
   # automatically inserting permalinks for headers.

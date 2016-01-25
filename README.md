@@ -1,8 +1,8 @@
-# Aglio Default Theme
+# Aglio iobeam Theme
 
 [![Dependency Status](https://img.shields.io/david/danielgtaylor/aglio/olio-theme.svg)](https://david-dm.org/danielgtaylor/aglio) [![Build Status](http://img.shields.io/travis/danielgtaylor/aglio/olio-theme.svg)](https://travis-ci.org/danielgtaylor/aglio) [![Coverage Status](http://img.shields.io/coveralls/danielgtaylor/aglio/olio-theme.svg)](https://coveralls.io/r/danielgtaylor/aglio) [![NPM version](http://img.shields.io/npm/v/aglio-theme-olio.svg)](https://www.npmjs.org/package/aglio-theme-olio) [![License](http://img.shields.io/npm/l/aglio-theme-olio.svg)](https://www.npmjs.org/package/aglio-theme-olio)
 
-This is *Olio*, the default theme engine for [Aglio](https://github.com/danielgtaylor/aglio). It takes an [API Blueprint](http://apiblueprint.org/) AST and renders it into static HTML. Example use:
+This theme is based on *Olio*, the default theme engine for [Aglio](https://github.com/danielgtaylor/aglio). It takes an [API Blueprint](http://apiblueprint.org/) AST and renders it into static HTML. Example use:
 
 ```bash
 $ sudo npm install -g aglio
@@ -10,6 +10,8 @@ $ aglio -i blueprint.apib -o MyAPI.html
 ```
 
 Theme engines for Aglio are described in more detail in the [Aglio documentation](https://github.com/danielgtaylor/aglio#customizing-output).
+
+The primary changes from _Olio_ are related to anchor tags and element ids for section headings.  These mods are to enable integration into a custom react wrapper for generated docs.
 
 ## Design Philosophy
 Olio is designed from the ground up to be both **fast** and **extensible** while maintaining backward compatibility with most of the original Aglio theme. It uses the following technologies:
