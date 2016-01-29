@@ -114,7 +114,7 @@ getCss = (variables, styles, verbose, done) ->
   compiledPath = path.join ROOT, 'cache',
     "#{sha1 key}.css"
 
-  defaultVariablePath = path.join ROOT, 'styles', 'variables-default.less'
+  defaultVariablePath = path.join ROOT, 'styles', 'variables-iobeam.less'
   sources = [defaultVariablePath]
 
   if not Array.isArray(variables) then variables = [variables]
