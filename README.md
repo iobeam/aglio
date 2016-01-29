@@ -6,7 +6,7 @@ This theme is based on *Olio*, the default theme engine for [Aglio](https://gith
 
 ```bash
 $ sudo npm install -g aglio
-$ aglio -i blueprint.apib -o MyAPI.html
+$ aglio -t iobeamdocs -i blueprint.apib -o MyAPI.html
 ```
 
 Theme engines for Aglio are described in more detail in the [Aglio documentation](https://github.com/danielgtaylor/aglio#customizing-output).
