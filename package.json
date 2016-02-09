@@ -1,6 +1,6 @@
 {
   "name": "aglio-theme-iobeamdocs",
-  "version": "1.6.2",
+  "version": "1.7.0",
   "description": "Theme for the Aglio API Blueprint renderer modded for iobeam",
   "main": "lib/main.js",
   "scripts": {
